@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 20px;
+    height: 100vh;
+    display: grid;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: "navBar navBar navBar navBar" "sidebar sidebar main main" "sidebar sidebar content1 content2" "sidebar sidebar footer footer ";
+    grid-template-columns: 1fr 1fr 2fr 2fr;
+    grid-template-rows: 50px 1fr 1fr 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.Item1 {
+    background-color: aqua;
+    color: black;
+    padding: 10px;
+    border: black 1px solid;
+}
+
+.Item2 {
+    background-color: slateblue;
+    color: black;
+    padding-top: 200px;
+    border: black 1px solid;
+}
+
+.Item3 {
+    background-color: slategray;
+    color: black;
+    padding-top: 50px;
+    border: black 1px solid;
+}
+
+.Item4 {
+    background-color: slategray;
+    color: black;
+    padding-top: 50px;
+    border: black 1px solid;
+}
+
+.Item5 {
+    background-color: slategray;
+    color: black;
+    padding-top: 50px;
+    border: black 1px solid;
+}
+
+.Item6 {
+    background-color: springgreen;
+    color: black;
+    padding-top: 50px;
+    border: black 1px solid;
+}
+
+.Item1 {
+    grid-area: navBar;
+}
+
+.Item2 {
+    grid-area: sidebar;
+}
+
+.Item3 {
+    grid-area: main;
+}
+
+.Item4 {
+    grid-area: content1;
+}
+
+.Item5 {
+    grid-area: content2;
+}
+
+.Item6 {
+    grid-area: footer;
+}
+
+@media (max-width: 550px) {
+    .grid-container {
+        grid-template-areas: "navBar navBar navBar navBar" "main main main main" "content1 content1 content1 content1" "content2 content2 content2 content2" "footer footer footer footer ";
+        grid-template-rows: repeat(5, 1fr);
+    }
+    .Item2 {
+        display: none;
+    }
+}
